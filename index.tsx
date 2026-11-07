@@ -1,14 +1,16 @@
-/*
- * Discord Workspace — private Vencord user plugin starter.
- * SPDX-License-Identifier: GPL-3.0-or-later
- */
 import "./styles.css";
 
 import { ChatBarButton, ChatBarButtonFactory } from "@api/ChatButtons";
 import { insertTextIntoChatInputBox } from "@utils/discord";
 import definePlugin from "@utils/types";
 import { Message } from "@vencord/discord-types";
-import { MessageStore, SelectedChannelStore, UserStore, openModal, useState } from "@webpack/common";
+import {
+    MessageStore,
+    SelectedChannelStore,
+    UserStore,
+    openModal,
+    useState
+} from "@webpack/common";
 
 import { WorkspaceDashboard } from "./ui/WorkspaceDashboard";
 import { readAIConfig, generateReply } from "./services/ai";
@@ -18,7 +20,7 @@ function WorkspaceModal(props: { onClose(): void; }) {
 }
 
 export function openWorkspace(): void {
-    openModal(props => <WorkspaceModal onClose={props.onClose} />);
+    openModal((props: any) => <WorkspaceModal onClose={props.onClose} />);
 }
 
 function Icon({ height = 20, width = 20 }: { height?: number; width?: number; }) {
