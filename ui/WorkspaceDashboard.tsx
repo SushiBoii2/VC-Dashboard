@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "@webpack/common";
 import { AIConfig, DEFAULT_AI_CONFIG, readAIConfig, writeAIConfig } from "../services/ai";
 import { EMPTY_WORKSPACE, loadWorkspace, saveWorkspace, WorkspaceData } from "../modules/storage";
 
