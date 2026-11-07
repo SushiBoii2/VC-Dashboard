@@ -4,13 +4,7 @@ import { ChatBarButton, ChatBarButtonFactory } from "@api/ChatButtons";
 import { insertTextIntoChatInputBox } from "@utils/discord";
 import definePlugin from "@utils/types";
 import { Message } from "@vencord/discord-types";
-import {
-    MessageStore,
-    SelectedChannelStore,
-    UserStore,
-    openModal,
-    useState
-} from "@webpack/common";
+import { MessageStore, SelectedChannelStore, UserStore, openModal, useState } from "@webpack/common";
 
 import { WorkspaceDashboard } from "./ui/WorkspaceDashboard";
 import { readAIConfig, generateReply } from "./services/ai";
